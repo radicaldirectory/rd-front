@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Test from "../components/Test";
 
 const Title = styled.h1`
   font-size: 50px;
@@ -6,5 +7,10 @@ const Title = styled.h1`
 `;
 
 export default function Home() {
-  return <Title>Welcome to Radical Directory !!!</Title>;
+  return (
+    <Title>
+      Welcome to Radical Directory !!!
+      <Test />
+    </Title>
+  );
 }
