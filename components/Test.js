@@ -15,13 +15,18 @@ export default function Test() {
   if (error) return <div>Error loading groups.</div>;
   if (loading) return <div>Loading</div>;
 
-  console.log(data);
+  // data.groups.map((group) => console.log(group));
+  // console.log(data);
 
-  const { groups: testQuery } = data;
+  // const { groups: testQuery } = data;
 
   return (
-    // {groups.map((group) => (
-    // <p>{group.name}</p>))}
-    <p>hello</p>
+    <>
+      <p>Here are the groups:</p>
+      {data.groups.map((group, key) => {
+        console.log(group.Name);
+        return <p key={key}>{group.Name}</p>;
+      })}
+    </>
   );
 }
